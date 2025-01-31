@@ -85,11 +85,7 @@ func (rs *ReturnStatement) String() string {
 	var out bytes.Buffer
 
 	out.WriteString(rs.TokenLiteral() + " ")
-	out.WriteString(rs.Name.String())
 	out.WriteString(" = ")
-
-	if rs.Value != nil {
-		out.WriteString(rs.Value.String())
-	}
+	out.WriteString("stmt") // this is just a placeholder
 	return out.String()
 }
