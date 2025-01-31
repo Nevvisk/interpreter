@@ -6,6 +6,10 @@ import (
 )
 
 func TestString(t *testing.T) {
+	TestLetStatement(t)
+}
+
+func TestLetStatement(t *testing.T) {
 	program := &Program{
 		Statements: []Statement{
 			&LetStatement{
