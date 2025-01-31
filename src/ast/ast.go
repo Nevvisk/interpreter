@@ -79,7 +79,7 @@ type ReturnStatement struct {
 	Value Expression
 }
 
-func (rs *ReturnStatement) expressionNode()      {}
+func (rs *ReturnStatement) statementNode()       {}
 func (rs *ReturnStatement) TokenLiteral() string { return rs.Token.Literal }
 func (rs *ReturnStatement) String() string {
 	var out bytes.Buffer
