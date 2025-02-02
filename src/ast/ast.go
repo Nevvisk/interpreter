@@ -74,9 +74,8 @@ func (i *Identifier) String() string {
 }
 
 type ReturnStatement struct {
-	Token token.Token
-	Name  *Identifier
-	Value Expression
+	Token       token.Token
+	ReturnValue Expression
 }
 
 func (rs *ReturnStatement) statementNode()       {}

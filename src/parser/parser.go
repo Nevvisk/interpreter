@@ -69,11 +69,12 @@ func (p *Parser) parseStatement() ast.Statement {
 
 func (p *Parser) parseReturnStatement() *ast.ReturnStatement {
 	stmt := &ast.ReturnStatement{Token: p.curToken}
-	if !p.expectPeek(token.IDENT) {
-		return nil
+
+	p.nextToken()
+	for !p.curTokenIs(token.SEMICOLON) {
+		p.nextToken()
 	}
 
-	stmt.Name = &ast.Identifier{Token: p.curToken, Value: p.curToken.Literal}
 	return stmt
 }
 
