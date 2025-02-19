@@ -397,7 +397,7 @@ func testInfixExpression(t *testing.T, exp ast.Expression, left interface{}, ope
 		t.Errorf("exp is not ast.OperatorExpression. got =%T(%s)", exp, exp)
 		return false
 	}
-	if !testLiteralExpression(t, opExp, left) {
+	if !testLiteralExpression(t, opExp.Left, left) {
 		return false
 	}
 	if opExp.Operator != operator {
