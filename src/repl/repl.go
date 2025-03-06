@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"interpreter/src/lexer"
 	"interpreter/src/parser"
-	"interpreter/src/token"
 	"io"
 )
 
